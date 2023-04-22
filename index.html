@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfólio - Maria Matos</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+	<!-- Navbar Section -->
+
+		<nav class="navbar"> 
+			<div class="navbar__container">
+				<a href="#main" id="navbar__logo"> Portfólio </a>
+				<div class="navbar__toggle" id="mobile-menu">
+					<spam class="bar"></spam>
+					<spam class="bar"></spam>
+					<spam class="bar"></spam>
+				</div>
+				<ul class="navbar__menu">
+					<li class="navbar__item">
+						<a href="#main" class="navbar__links"> Início </a>
+					</li>
+					<li class="navbar__item">
+						<a href="#about" class="navbar__links"> Sobre </a>
+					</li>
+					<li class="navbar__item">
+						<a href="#projects" class="navbar__links"> Portfólio </a>
+					</li>
+					<li class="navbar__btn">
+						<a href="#contact" class="button"> Contacto </a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Header Section -->
+		<div class="main">
+			<div class="main__container">
+				<h1>Maria Matos</h1>
+				<h2>Data Analyst</h2>
+				<p></p>
+			</div>
+		</div>
+
+		<!--About Section-->
+		<div id="about">
+			<div class="about__container">
+				<h2 class="sub-title">Sobre Mim</h2>
+				<p>Chamo-me Maria Matos e sou apaixonada por ciência de dados e análise de dados.</p>
+				<p>Com formação superior na área de ciências sociais, tenho experiência em recolha de dados a partir de várias ferramentas, como questionários e entrevistas. Também tenho conhecimento teórico e prático em tratamento de dados. Bem como visualização e apresentação de dados em Python, Power BI e Tableau.</p>
+				<p>Possuo conhecimento teórico relativo ao comportamento social que me permite enriquecer as minhas análises com uma perspetiva que melhor reflete o mundo real e que vai para além de uma leitura descritiva de números.</p>
+				<div class="tab-title">
+					<h3>Skills</h3>
+				</div>
+				<div class="tab-contents">
+					<ul>
+						<li><span>Programação</span></li>
+						<li>Python, R<br>HTML/CSS, JavaScript</li>
+					</ul>
+					<ul>
+						<li><span>Machine Learning</span></li>
+						<li>Modelos Supervisionados<br>Modelos Não-Supervisionados</li>
+					</ul>
+					<ul>
+						<li><span>Visualização de Dados</span></li>
+						<li>Tableau<br> Ms Power BI</li>
+					</ul>
+				</div>
+				<div class="tab-contents">
+					<ul>
+						<li><span>Software Tools</span></li>
+						<li>IBM SPSS<br>Ms Excel<br>Jupyter Notebook<br>Orange<br>VS Code</li>
+					</ul>
+					<ul>
+						<li><span>Recolha de Dados</span></li>
+						<li>Questionários<br>Entrevistas</li>
+					</ul>
+					<ul>
+						<li><span>Probabilidade e Estatística</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--Projects Section-->
+		<div id="projects">
+			<div class="container">
+				<h2 class="sub-title">Portfólio</h2>
+				<div class="project-list">
+					<div class="project">
+						<a href="https://public.tableau.com/app/profile/m.m4957/viz/GlobalMethaneGasEmissionsktin2022/GlobalMethaneGasEmissionsktin2022" target="_blank" class="project__button">
+							<img src="images/pic2.svg">
+							<div class="layer">
+							<h3>Dashboard Interativa no Tableau:<br>"Global Methane Gas Emissions (kt) in 2022"</h3>
+							<p></p>
+							</div>
+						</a>
+					</div>
+					<div class="project">
+						<a href="projects/ml_sa.html" class="project__button">
+							<img src="images/pic3.svg">
+							<div class="layer">
+							<h3 href="projects/ml_sa.html">Análise de Sentimento de Reviews:<br> Comparação de Modelos VADER e RoBERTa</h3>
+							<p></p>
+							</div>
+						</a>
+					</div>
+					<div class="project">
+						<a href="projects/am_rfm_cltv.html" class="project__button">
+							<img src="images/pic4.svg">
+							<div class="layer">
+							<h3>Análise de Campanha de Marketing:<br> RFM & CLTV</h3>
+							<p></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Contact Section-->
+		<div id="contact">
+			<h2>Contacto</h2>
+			<div class="container">
+				<form name="submit-to-google-sheet">
+					<input type="text" name="Nome" placeholder="O teu nome" required>
+					<input type="email" name="E-mail" placeholder="O teu E-mail" required>
+					<textarea name="Mensagem" rows="10" placeholder="A tua mensagem"></textarea>
+					<button type="submit" class="btn"><b>Enviar</b></button>
+				</form>
+				<span id="msg"></span>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Made with HTML, CSS and JavaScript</p>
+		</div>
+
+		<script src="app.js"></script>
+
+		<script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwz31856Aig802GywkZ65DO3r0LLfKUJ_W5X9sRNnmsersZ5jRYAJloqWfvMqgOojp9iQ/exec'
+			const form = document.forms['submit-to-google-sheet']
+			const msg = document.getElementById("msg")
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => {
+					msg.innerHTML = "Mensagem enviada com sucesso!"
+					setTimeout(function(){
+						msg.innerHTML = ""
+					}, 5000)
+					form.reset()
+				})
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
+	</body>
+</html>
