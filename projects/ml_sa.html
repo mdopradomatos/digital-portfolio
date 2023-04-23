@@ -69,23 +69,23 @@
             <h3>Porquê análise de sentimento?</h3>
             <p>Análise sentimental é uma forma de processamento de linguagem natural,
 			que procura identificar, extrair e quantificar motivações emocinais de um corpo de texto.
-			Podendo ser aplicada em contextos como marketing e análise de produtos. [1]</p>
+			Pode ser aplicada em contextos como marketing e análise de produtos. [1]</p>
 			<p>Neste projecto, procuro comparar a performance dos modelos "VADER" e "RoBERTa" no caso de reviews de livros publicadas na plataforma Kindle.</p>
         </div>
 		<div class="corpo1">
-			<h3>Classificação dadas pelos utilizadores</h3>
-			<p>No caso de reviews de livros, é habitual os utilizadores atribuirem uma qualificação de 1 a 5 estrelas.
-			Na nossa base de dados, encontramos o mesmo sistema, onde os utilizadores atribuirem uma qualificação quantitativa (estrela), juntamente
+			<h3>Classificações dadas pelos utilizadores</h3>
+			<p>No caso de reviews de livros, é habitual os utilizadores atribuírem uma qualificação de 1 a 5 estrelas.
+			Na nossa base de dados, encontramos o mesmo sistema, onde os utilizadores atribuíram uma qualificação quantitativa (estrela), juntamente
 			com uma qualificação qualitativa (review).</p>
-			<p>Neste cenário já temos atribuidas às reviews dos utilizadores uma qualificação quantitativa.</p>
-			<p>Grande parte das reviews tiveram uma qualificação igual ou superior a 3 estrelas. Sendo assim, podemos afirmar que maioria são reviews positivas.</p>
+			<p>Neste cenário já temos atribuídas às reviews dos utilizadores uma qualificação quantitativa.</p>
+			<p>Grande parte das reviews tiveram uma qualificação igual ou superior a 3 estrelas. Assim, podemos afirmar que maioria das reviews estão associadas um sentimento positivas.</p>
 			<img src="../images/reviews_by_star.png">
 		</div>
 		<div class="corpo2">
 			<h3>Scoring dos modelos VADER e RoBERTa</h3>
 			<p>Com os modelos "VADER" e "RoBERTa", a quantificação sentimental é feita a partir de "polarity scores". Sendo que os modelos vão atribuir uma
 			qualificação às categorias emocionais de "negativo", "neutro" e "positivo".</p>
-			<p>A figura apresentada a baixo, representa as qualificações feitas pelo modelo "VADER" consoante as estrelas dadas pelos utilizadores:</p>
+			<p>A figura, apresentada abaixo, representa as qualificações feitas pelo modelo "VADER" consoante as estrelas dadas pelos utilizadores:</p>
 			<img src="../images/vader_scores.png">
 			<p>Com o modelo "RoBERTa", foram elaboradas as seguintes qualificações por estrelas:</p>
 			<img src="../images/roberta_scores.png">
@@ -93,7 +93,7 @@
 		<div class="concl">
 			<h3>Comparação de Performance: VADER vs. RoBERTa</h3>
 			<p>Ao observar a figura de baixo, podemos verificar que o modelo "RoBERTa" é mais confiante a dar qualificações que o modelo "VADER".<br>
-				Sendo que o modelo "RoBERTa" consegue dar qualificações que melhor correspondem às qualificações que os utilizadores deram.
+				Bem como, o modelo "RoBERTa" consegue dar qualificações que melhor correspondem às qualificações que os utilizadores deram.
 			</p>
 			<img src="../images/compare_performance.png">
 			<h3>Exemplos de reviews onde os modelos ficaram confusos</h3>
